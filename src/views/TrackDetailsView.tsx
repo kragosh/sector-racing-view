@@ -38,7 +38,9 @@ export default function TrackDetailsView() {
     if (data === undefined) {
         return (
             <div className={"details-board"}>
-                <div>Loading...</div>
+                <div className={"detail-body"}>
+                    <div>Loading...</div>
+                </div>
             </div>
         )
     }

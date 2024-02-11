@@ -27,7 +27,7 @@
     width: 100%;
     height: auto;
     border-radius: 50px;
-    background-color: #1d1d1d40;
+    background: linear-gradient(to bottom, rgba(0, 106, 63, 1) 0%,rgba(16, 16, 16, 0.5) 100%);
     box-shadow: 4px 4px 4px 0px rgba(0, 0, 0, 0.2);
     display: flex;
     flex-direction: row;
@@ -71,7 +71,7 @@
     width: 100%;
     height: fit-content;
     border-radius: 8px;
-    background-color: rgba(26, 26, 26, 0.8);
+    background-color: rgba(26, 26, 26, 0.9);
     box-shadow: 4px 4px 4px 0px rgba(0, 0, 0, 0.2);
     display: flex;
     flex-direction: row;

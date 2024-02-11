@@ -23,6 +23,7 @@ export default function TrackOverviewView() {
                     <OverViewTrackRow track={track} index={index}/>)
                 )}
             </div>
+            <img className={"detail-background"} src="images/overview-back.jpg" alt="background"/>
         </div>
     )
 }

@@ -500,3 +500,13 @@
 .fadeInElement {
     animation: fadein 100ms ease-in forwards;
 }
+
+.detail-background {
+    position: fixed;
+    left:0;
+    top:0;
+    width: 100%;
+    height: 100%;
+    z-index: -1000;
+
+}

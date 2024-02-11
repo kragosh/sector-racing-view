@@ -94,7 +94,9 @@ export default function TrackDetailsView() {
                     </div>
                 </div>
             </div>
-
+            <div className={"slideInFromLeft detail-background"}>
+                <img className={"detail-background"} src={data.image} alt="background"/>
+            </div>
         </div>
     );
 

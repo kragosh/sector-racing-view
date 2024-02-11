@@ -33,6 +33,6 @@ export default function LeaderboardEntry(props: LeaderboardEntryProps) {
         </div>
         <div className={"detail-leaderboard-entry-time"}>{props.time}</div>
         <div className={"detail-leaderboard-entry-weather"}><FontAwesomeIcon icon={iconName}/></div>
-        <div className={"detail-leaderboard-entry-placing"}>{props.placing}</div>
+        <div className={"detail-leaderboard-entry-placing"}>#{props.placing}</div>
     </div>;
 }

@@ -26,12 +26,5 @@
         "name": "Observatorium Racing",
         "driver": "Max Mustermann",
         "time": "1:23:456"
-    },
-    {
-        "id": 5,
-        "image": "images/observatory.jpeg",
-        "name": "Observatorium Racing",
-        "driver": "Max Mustermann",
-        "time": "1:23:456"
     }
 ]

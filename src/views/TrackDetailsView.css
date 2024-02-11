@@ -1,6 +1,14 @@
 
 /* Board */
 .details-board {
+    padding-left: 16px;
+    padding-right: 16px;
+    box-sizing: border-box;
+    width: 100%;
+    height: 100%;
+}
+
+.detail-inner {
     box-sizing: border-box;
     width: 100%;
     height: 100%;
@@ -9,6 +17,7 @@
     align-items: start;
     justify-content: space-between;
     flex-wrap: nowrap;
+
 }
 
 .detail-logo-spacer {
@@ -49,6 +58,7 @@
 
 /* detail-header */
 .detail-header {
+    margin-top: 16px;
     box-sizing: border-box;
     position: relative;
     width: 100%;
@@ -123,6 +133,8 @@
     gap: 16px;
     padding: 0px;
     flex-wrap: nowrap;
+    margin-bottom: 16px;
+
 }
 
 /* detail-leaderboard-week */
@@ -379,8 +391,8 @@
 .detail-leaderboard-bottom-back {
     cursor: pointer;
     position: relative;
-    width: auto;
-    height: auto;
+    width: 96px;
+    height: 100%;
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -388,6 +400,8 @@
     gap: 16px;
     padding: 0px;
     flex-wrap: nowrap;
+    border-radius: 50px;
+    background-color: rgba(26, 26, 26, 0.75);
 }
 
 

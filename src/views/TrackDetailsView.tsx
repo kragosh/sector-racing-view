@@ -21,9 +21,6 @@ export default function TrackDetailsView() {
     const [loading, setLoading] = useState<boolean>(true);
     let {id} = useParams();
 
-    function backbutton() {
-        navigate(`/`);
-    }
 
     useEffect(() => {
         setLoading(true);
@@ -46,56 +43,49 @@ export default function TrackDetailsView() {
     }
     return (
         <div className={"details-board"}>
-            <div className={"detail-logo-box"}>
-                <img className="detail-logo-img" src={"https://via.placeholder.com/800x600"} alt="sponsor-logo"/>
-            </div>
-            <div className={"detail-body"}>
-                <TrackDetailTitle title={data.name} image={data.image}
-                                  previous={data.previous}
-                                  next={data.next}/>
-                <div className={"detail-content"}>
-                    <div className={"detail-leaderboard-week fadeInElement"}>
-                        <div className={"detail-leaderboard-week-header"}>
-                            <div className={"detail-leaderboard-week-title"}>Leaderboard (diese Woche)</div>
-                        </div>
-                        <div className={"detail-leaderboard-week-content"}>
-                            {(loading) ?
-                                <div className={"detail-leaderboard-entry-driverbox-name"}>Loading...</div>
-                                :
-                                data.week.map((entry) => (
-                                    <LeaderboardEntry car={entry.car} name={entry.name} time={entry.time}
-                                                      placing={entry.placing} weather={entry.weather}/>
-                                ))}
-                        </div>
+            <div className={"detail-inner"}>
+                <div className={"detail-logo-box"}>
+                    <img className="detail-logo-img" src={"https://via.placeholder.com/800x600"} alt="sponsor-logo"/>
+                </div>
+                <div className={"detail-body"}>
 
-                    </div>
-                    <div className={"detail-leaderboard-overall fadeInElement"}>
-                        <div className={"detail-leaderboard-overall-header"}>
-                            <div className={"detail-leaderboard-overall-header-title"}>Leaderboard</div>
+                    <TrackDetailTitle title={data.name} image={data.image}
+                                      previous={data.previous}
+                                      next={data.next}/>
+                    <div className={"detail-content"}>
+                        <div className={"detail-leaderboard-week fadeInElement"}>
+                            <div className={"detail-leaderboard-week-header"}>
+                                <div className={"detail-leaderboard-week-title"}>Leaderboard (diese Woche)</div>
+                            </div>
+                            <div className={"detail-leaderboard-week-content"}>
+                                {(loading) ?
+                                    <div className={"detail-leaderboard-entry-driverbox-name"}>Loading...</div>
+                                    :
+                                    data.week.map((entry) => (
+                                        <LeaderboardEntry car={entry.car} name={entry.name} time={entry.time}
+                                                          placing={entry.placing} weather={entry.weather}/>
+                                    ))}
+                            </div>
+
                         </div>
-                        <div className={"detail-leaderboard-overall-content"}>
-                            {(loading) ?
-                                <div className={"detail-leaderboard-entry-driverbox-name"}>Loading...</div>
-                                :
-                                data.overall.map((entry) => (
-                                    <LeaderboardEntry car={entry.car} name={entry.name} time={entry.time}
-                                                      placing={entry.placing} weather={entry.weather}/>
-                                ))}                        </div>
+                        <div className={"detail-leaderboard-overall fadeInElement"}>
+                            <div className={"detail-leaderboard-overall-header"}>
+                                <div className={"detail-leaderboard-overall-header-title"}>Leaderboard</div>
+                            </div>
+                            <div className={"detail-leaderboard-overall-content"}>
+                                {(loading) ?
+                                    <div className={"detail-leaderboard-entry-driverbox-name"}>Loading...</div>
+                                    :
+                                    data.overall.map((entry) => (
+                                        <LeaderboardEntry car={entry.car} name={entry.name} time={entry.time}
+                                                          placing={entry.placing} weather={entry.weather}/>
+                                    ))}                        </div>
+                        </div>
                     </div>
                 </div>
-                <div className={"detail-leaderboard-bottom"}>
-                    <div className={"detail-leaderboard-bottom-back"} onClick={backbutton}>
-                        <FontAwesomeIcon icon={"arrow-left"} className={"detail-leaderboard-bottom-icon"}/>
-                        <div className={"detail-leaderboard-bottom-text"}>
-                            Übersicht
-                        </div>
-                    </div>
-                    <div className={"detail-leaderboard-bottom-filter"}>
-                    </div>
+                <div className={"slideInFromLeft detail-background"}>
+                    <img className={"detail-background"} src={data.image} alt="background"/>
                 </div>
-            </div>
-            <div className={"slideInFromLeft detail-background"}>
-                <img className={"detail-background"} src={data.image} alt="background"/>
             </div>
         </div>
     );

@@ -1,13 +1,12 @@
 import React from 'react';
-import logo from './logo.svg';
 import './App.css';
 import TrackOverviewView from "./views/TrackOverviewView";
-
-import {
-    createHashRouter,
-    RouterProvider,
-} from "react-router-dom";
+import {createHashRouter, RouterProvider,} from "react-router-dom";
 import TrackDetailsView from "./views/TrackDetailsView";
+import { library } from '@fortawesome/fontawesome-svg-core'
+import {faArrowLeft, faChevronLeft, faChevronRight} from '@fortawesome/free-solid-svg-icons'
+
+library.add(faChevronLeft, faChevronRight, faArrowLeft)
 
 const router = createHashRouter([
     {

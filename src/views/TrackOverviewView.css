@@ -1,11 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Raleway:wght@100;300;400;800&display=swap');
 
-body {
-    padding: 16px;
-    font-family: 'Raleway', serif;
-    background: linear-gradient(to bottom, rgba(255, 255, 255, 0.2), transparent), linear-gradient(to top, #0A3D6210 0%, #0A3D6210 20%, #2A5298a0 100%), linear-gradient(to right, #FEB779 0%, #FC94C5 25%, #D07FC2 50%, #862E85 100%);
-}
-
 /* Board */
 .board {
     width: 100%;

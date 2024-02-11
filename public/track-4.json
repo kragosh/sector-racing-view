@@ -1,0 +1,80 @@
+{
+  "name": "Observatorium Racing",
+  "image": "https://via.placeholder.com/1440x900",
+  "week": [
+    {
+      "car": "BF Club",
+      "name": "Max Mustermann",
+      "time": "1:23:456",
+      "weather": 1,
+      "placing": 1
+    },
+    {
+      "car": "Dinka Blista",
+      "name": "Mitch Maier",
+      "time": "1:24:456",
+      "weather": 2,
+      "placing": 2
+    },
+    {
+      "car": "Weeny Issi",
+      "name": "Peter Parker",
+      "time": "1:25:456",
+      "weather": 3,
+      "placing": 3
+    },
+    {
+      "car": "Grotti Brioso",
+      "name": "Alex Ander",
+      "time": "1:26:456",
+      "weather": 2,
+      "placing": 4
+    },
+    {
+      "car": "Benefactor Panto",
+      "name": "Karl König",
+      "time": "1:26:456",
+      "weather": 1,
+      "placing": 5
+    }
+  ],
+  "overall": [
+    {
+      "car": "BF Club",
+      "name": "Max Mustermann",
+      "time": "1:23:456",
+      "weather": 1,
+      "placing": 1
+    },
+    {
+      "car": "Dinka Blista",
+      "name": "Mitch Maier",
+      "time": "1:24:456",
+      "weather": 1,
+      "placing": 2
+    },
+    {
+      "car": "Weeny Issi",
+      "name": "Peter Parker",
+      "time": "1:25:456",
+      "weather": 1,
+      "placing": 3
+    },
+    {
+      "car": "Grotti Brioso",
+      "name": "Alex Ander",
+      "time": "1:26:456",
+      "weather": 1,
+      "placing": 4
+    },
+    {
+      "car": "Benefactor Panto",
+      "name": "Karl König",
+      "time": "1:26:456",
+      "weather": 1,
+      "placing": 5
+    }
+  ],
+  "previous": 3,
+  "next": 1
+}

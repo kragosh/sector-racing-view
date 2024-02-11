@@ -3,7 +3,7 @@ import TrackDetailTitle from "./Compontents/TrackDetailsView/TrackDetailTitle";
 import "./TrackDetailsView.css";
 import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
 import LeaderboardEntry, {LeaderboardEntryProps} from "./Compontents/TrackDetailsView/LeaderboardEntry";
-import {useNavigate} from "react-router-dom";
+import {useNavigate, useParams} from "react-router-dom";
 import {useEffect, useState} from "react";
 
 type TrackDetailsViewProps = {
@@ -17,20 +17,30 @@ type TrackDetailsViewProps = {
 
 export default function TrackDetailsView() {
     const navigate = useNavigate();
-    const [data , setData] = useState<TrackDetailsViewProps>();
+    const [data, setData] = useState<TrackDetailsViewProps>();
+    const [loading, setLoading] = useState<boolean>(true);
+    let {id} = useParams();
 
     function backbutton() {
         navigate(`/`);
     }
 
     useEffect(() => {
-        fetch('track-1.json')
+        setLoading(true);
+        fetch(`track-${id}.json`)
             .then(response => response.json())
-            .then(data => setData(data));
-    });
+            .then(data => {
+                setData(data)
+                setLoading(false);
+            });
+    }, [id]);
 
     if (data === undefined) {
-        return <div>Loading...</div>;
+        return (
+            <div className={"details-board"}>
+                <div>Loading...</div>
+            </div>
+        )
     }
     return (
         <div className={"details-board"}>
@@ -38,17 +48,21 @@ export default function TrackDetailsView() {
                 <img className="detail-logo-img" src={"https://via.placeholder.com/800x600"} alt="sponsor-logo"/>
             </div>
             <div className={"detail-body"}>
-                <TrackDetailTitle title={"Track Details"} image={"https://via.placeholder.com/800x600"}
+                <TrackDetailTitle title={data.name} image={data.image}
                                   previous={data.previous}
-                                  next={data.next }/>
+                                  next={data.next}/>
                 <div className={"detail-content"}>
                     <div className={"detail-leaderboard-week fadeInElement"}>
                         <div className={"detail-leaderboard-week-header"}>
                             <div className={"detail-leaderboard-week-title"}>Leaderboard (diese Woche)</div>
                         </div>
                         <div className={"detail-leaderboard-week-content"}>
-                            {data.week.map((entry) => (
-                                <LeaderboardEntry car={entry.car} name={entry.name} time={entry.time} placing={entry.placing} weather={entry.weather}/>
+                            {(loading) ?
+                                <div>Loading...</div>
+                                :
+                                data.week.map((entry) => (
+                                    <LeaderboardEntry car={entry.car} name={entry.name} time={entry.time}
+                                                      placing={entry.placing} weather={entry.weather}/>
                                 ))}
                         </div>
 
@@ -58,9 +72,13 @@ export default function TrackDetailsView() {
                             <div className={"detail-leaderboard-overall-header-title"}>Leaderboard</div>
                         </div>
                         <div className={"detail-leaderboard-overall-content"}>
-                            {data.overall.map((entry) => (
-                                <LeaderboardEntry car={entry.car} name={entry.name} time={entry.time} placing={entry.placing} weather={entry.weather}/>
-                            ))}                        </div>
+                            {(loading) ?
+                                <div>Loading...</div>
+                                :
+                                data.overall.map((entry) => (
+                                    <LeaderboardEntry car={entry.car} name={entry.name} time={entry.time}
+                                                      placing={entry.placing} weather={entry.weather}/>
+                                ))}                        </div>
                     </div>
                 </div>
                 <div className={"detail-leaderboard-bottom"}>

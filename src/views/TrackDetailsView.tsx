@@ -12,6 +12,14 @@ export default function TrackDetailsView() {
         navigate(`/`);
     }
 
+    let leaderBoardEntryProps = {
+        car: "Ferrari",
+        name: "Sebastian Vettel",
+        time: "1:23:456",
+        weather: 1,
+        placing: 1
+    }
+
     return (
         <div className={"details-board"}>
             <div className={"detail-logo-box"}>
@@ -27,11 +35,11 @@ export default function TrackDetailsView() {
                             <div className={"detail-leaderboard-week-title"}>Leaderboard (diese Woche)</div>
                         </div>
                         <div className={"detail-leaderboard-week-content"}>
-                            <LeaderboardEntry/>
-                            <LeaderboardEntry/>
-                            <LeaderboardEntry/>
-                            <LeaderboardEntry/>
-                            <LeaderboardEntry/>
+                            <LeaderboardEntry car={leaderBoardEntryProps.car} name={leaderBoardEntryProps.name} time={leaderBoardEntryProps.time} placing={leaderBoardEntryProps.placing} weather={leaderBoardEntryProps.weather}/>
+                            <LeaderboardEntry car={leaderBoardEntryProps.car} name={leaderBoardEntryProps.name} time={leaderBoardEntryProps.time} placing={leaderBoardEntryProps.placing} weather={leaderBoardEntryProps.weather}/>
+                            <LeaderboardEntry car={leaderBoardEntryProps.car} name={leaderBoardEntryProps.name} time={leaderBoardEntryProps.time} placing={leaderBoardEntryProps.placing} weather={leaderBoardEntryProps.weather}/>
+                            <LeaderboardEntry car={leaderBoardEntryProps.car} name={leaderBoardEntryProps.name} time={leaderBoardEntryProps.time} placing={leaderBoardEntryProps.placing} weather={leaderBoardEntryProps.weather}/>
+                            <LeaderboardEntry car={leaderBoardEntryProps.car} name={leaderBoardEntryProps.name} time={leaderBoardEntryProps.time} placing={leaderBoardEntryProps.placing} weather={leaderBoardEntryProps.weather}/>
                         </div>
 
                     </div>
@@ -40,10 +48,8 @@ export default function TrackDetailsView() {
                             <div className={"detail-leaderboard-overall-header-title"}>Leaderboard</div>
                         </div>
                         <div className={"detail-leaderboard-overall-content"}>
-                            <LeaderboardEntry/>
-                            <LeaderboardEntry/>
-                            <LeaderboardEntry/>
-                            <LeaderboardEntry/>
+                            <LeaderboardEntry car={leaderBoardEntryProps.car} name={leaderBoardEntryProps.name} time={leaderBoardEntryProps.time} placing={leaderBoardEntryProps.placing} weather={leaderBoardEntryProps.weather}/>
+                            <LeaderboardEntry car={leaderBoardEntryProps.car} name={leaderBoardEntryProps.name} time={leaderBoardEntryProps.time} placing={leaderBoardEntryProps.placing} weather={leaderBoardEntryProps.weather}/>
                         </div>
                     </div>
                 </div>

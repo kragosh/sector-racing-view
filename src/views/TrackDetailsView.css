@@ -1,19 +1,26 @@
 
 /* Board */
 .details-board {
+    box-sizing: border-box;
     width: 100%;
-    height: 100vh;
+    height: 100%;
     display: flex;
     flex-direction: column;
     align-items: start;
     justify-content: space-between;
     flex-wrap: nowrap;
+    overflow: hidden;
+}
+
+.detail-logo-spacer {
+    box-sizing: border-box;
+    width: 220px;
 }
 
 /* detail-logo-box */
 .detail-logo-box {
     box-sizing: border-box;
-    position: relative;
+    position: absolute;
     width: 200px;
     height: 156px;
     right: 0px;
@@ -33,7 +40,6 @@
     box-sizing: border-box;
     width: 100%;
     height: 100vh;
-    top: 0px;
     display: flex;
     flex-direction: column;
     align-items: start;
@@ -109,7 +115,6 @@
     position: relative;
     width: 100%;
     height: 100%;
-    top: -60px;
     display: flex;
     flex-direction: row;
     align-items: start;
@@ -367,7 +372,6 @@
 .detail-leaderboard-bottom {
     box-sizing: border-box;
     position: relative;
-    top: -40px;
     width: 100%;
     height: auto;
     display: flex;
@@ -381,6 +385,7 @@
 
 /* detail-leaderboard-bottom-back */
 .detail-leaderboard-bottom-back {
+    cursor: pointer;
     position: relative;
     width: auto;
     height: auto;

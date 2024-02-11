@@ -16,11 +16,9 @@ export default function TrackDetailTitle(props: OverviewTitleProps) {
                     <div className="detail-header-trackname">{props.title}</div>
                     <FontAwesomeIcon icon={"chevron-right"} className={"detail-header-arrow-right"}/>
                 </div>
-                <div className={"detail-logo-box"}>
-                    <img className="detail-logo-img" src={props.image} alt="sponsor-logo"/>
+                <div className="detail-logo-spacer">
                 </div>
             </div>
-
 
         </>
     );

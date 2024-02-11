@@ -60,7 +60,7 @@ export default function TrackDetailsView() {
                         </div>
                         <div className={"detail-leaderboard-week-content"}>
                             {(loading) ?
-                                <div>Loading...</div>
+                                <div className={"detail-leaderboard-entry-driverbox-name"}>Loading...</div>
                                 :
                                 data.week.map((entry) => (
                                     <LeaderboardEntry car={entry.car} name={entry.name} time={entry.time}
@@ -75,7 +75,7 @@ export default function TrackDetailsView() {
                         </div>
                         <div className={"detail-leaderboard-overall-content"}>
                             {(loading) ?
-                                <div>Loading...</div>
+                                <div className={"detail-leaderboard-entry-driverbox-name"}>Loading...</div>
                                 :
                                 data.overall.map((entry) => (
                                     <LeaderboardEntry car={entry.car} name={entry.name} time={entry.time}

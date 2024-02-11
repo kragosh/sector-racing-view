@@ -9,7 +9,6 @@
     align-items: start;
     justify-content: space-between;
     flex-wrap: nowrap;
-    overflow: hidden;
 }
 
 .detail-logo-spacer {
@@ -141,6 +140,8 @@
     gap: 0px;
     padding: 0px;
     flex-wrap: nowrap;
+    overflow-y: auto;
+    overflow-x: hidden;
 }
 
 /* detail-leaderboard-week-header */
@@ -305,6 +306,8 @@
     gap: 0px;
     padding: 0px;
     flex-wrap: nowrap;
+    overflow-y: auto;
+    overflow-x: hidden;
 }
 
 /* detail-leaderboard-overerall-header */

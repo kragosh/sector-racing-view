@@ -481,3 +481,17 @@
 }
 
 
+@keyframes slideInFromLeft {
+    0% {
+        transform: translateX(-5%);
+        opacity: 0;
+    }
+    100% {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+.fadeInLeftElement {
+    animation: slideInFromLeft 200ms ease-in forwards;
+}

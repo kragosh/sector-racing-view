@@ -26,7 +26,7 @@ function getIconNameForNumber(number: number):IconProp {
 export default function LeaderboardEntry(props: LeaderboardEntryProps) {
     const iconName = getIconNameForNumber(props.weather);
 
-    return <div className={"detail-leaderboard-entry"}>
+    return <div className={"detail-leaderboard-entry fadeInLeftElement"}>
         <div className={"detail-leaderboard-entry-driverbox"}>
             <div className={"detail-leaderboard-entry-driverbox-car"}>{props.car}</div>
             <div className={"detail-leaderboard-entry-driverbox-name"}>{props.name}</div>

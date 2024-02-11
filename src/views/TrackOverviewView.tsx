@@ -12,7 +12,7 @@ export default function TrackOverviewView() {
         fetch("tracks.json")
             .then(response => response.json())
             .then(state => setState(state));
-    })
+    }, [])
 
     return (
         <div className="board">

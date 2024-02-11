@@ -30,7 +30,7 @@ export default function TrackDetailsView() {
                                   previous={4}
                                   next={3}/>
                 <div className={"detail-content"}>
-                    <div className={"detail-leaderboard-week"}>
+                    <div className={"detail-leaderboard-week fadeInElement"}>
                         <div className={"detail-leaderboard-week-header"}>
                             <div className={"detail-leaderboard-week-title"}>Leaderboard (diese Woche)</div>
                         </div>
@@ -43,7 +43,7 @@ export default function TrackDetailsView() {
                         </div>
 
                     </div>
-                    <div className={"detail-leaderboard-overall"}>
+                    <div className={"detail-leaderboard-overall fadeInElement"}>
                         <div className={"detail-leaderboard-overall-header"}>
                             <div className={"detail-leaderboard-overall-header-title"}>Leaderboard</div>
                         </div>

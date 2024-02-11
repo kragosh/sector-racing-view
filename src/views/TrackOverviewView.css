@@ -1,0 +1,142 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@100;300;400;800&display=swap');
+
+body {
+    padding: 16px;
+    font-family: 'Raleway', serif;
+    background: linear-gradient(to bottom, rgba(255, 255, 255, 0.2), transparent), linear-gradient(to top, #0A3D6210 0%, #0A3D6210 20%, #2A5298a0 100%), linear-gradient(to right, #FEB779 0%, #FC94C5 25%, #D07FC2 50%, #862E85 100%);
+}
+
+/* Board */
+.board {
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    justify-content: start;
+    gap: 32px;
+    flex-wrap: nowrap;
+}
+
+/* Sprunk-X-treme-Logo.webp */
+.overview-title-image {
+    position: absolute;
+    width: 200px;
+    height: 156px;
+    right: 24px;
+    top: -16px;
+}
+
+/* Header */
+.overview-title-box {
+    box-sizing: border-box;
+    width: 100%;
+    height: auto;
+    border-radius: 50px;
+    background-color: #1d1d1d40;
+    box-shadow: 4px 4px 4px 0px rgba(0, 0, 0, 0.2);
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 0px;
+    padding: 32px 32px;
+    flex-wrap: nowrap;
+}
+
+/* Racing Dashboard */
+.overview-title-text {
+    width: 100%;
+    height: 44px;
+    color: rgba(255, 255, 255, 1);
+    font-style: normal;
+    font-size: 36px;
+    font-weight: 800;
+    line-height: 1.2;
+    letter-spacing: 0px;
+    text-decoration: none;
+    text-transform: none;
+}
+
+.overview-content {
+    box-sizing: border-box;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    padding-left: 48px;
+    padding-right: 48px;
+    flex-wrap: nowrap;
+}
+
+/* Strecke */
+.overview-track-card {
+    cursor: pointer;
+    box-sizing: border-box;
+    width: 100%;
+    height: fit-content;
+    border-radius: 8px;
+    background-color: rgba(26, 26, 26, 0.8);
+    box-shadow: 4px 4px 4px 0px rgba(0, 0, 0, 0.2);
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    flex-wrap: nowrap;
+}
+
+/* GTA5_fjuMyiVeY4.jpg */
+.overview-track-card-image {
+    box-sizing: border-box;
+    width: 183px;
+    border-radius: 8px 0px 0px 8px;
+}
+
+/* Board */
+.overview-track-card-content {
+    box-sizing: border-box;
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: row;
+    align-items: start;
+    justify-content: space-between;
+    gap: 16px;
+    padding: 16px;
+    flex-wrap: nowrap;
+}
+
+/* Streckenname */
+.overview-track-card-name {
+    box-sizing: border-box;
+    width: 100%;
+    height: fit-content;
+    color: rgba(255, 255, 255, 1);
+    font-size: 24px;
+    font-weight: 800;
+    line-height: 1.2;
+    text-align: left;
+    letter-spacing: 0px;
+}
+
+/* Fahrer */
+.overview-track-card-driver {
+    box-sizing: border-box;
+    width: 100%;
+    color: rgba(120, 255, 219, 1);
+    font-style: normal;
+    font-size: 24px;
+    font-weight: 300;
+    text-align: right;
+    line-height: 1.2;
+}
+
+/* Zeit */
+.overview-track-card-time {
+    box-sizing: border-box;
+    width: auto;
+    color: rgba(255, 255, 255, 1);
+    font-style: normal;
+    font-size: 24px;
+    font-weight: 800;
+}

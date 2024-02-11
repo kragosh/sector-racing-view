@@ -2,24 +2,36 @@ import TrackDetailTitle from "./Compontents/TrackDetailsView/TrackDetailTitle";
 
 import "./TrackDetailsView.css";
 import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
-import LeaderboardEntry from "./Compontents/TrackDetailsView/LeaderboardEntry";
+import LeaderboardEntry, {LeaderboardEntryProps} from "./Compontents/TrackDetailsView/LeaderboardEntry";
 import {useNavigate} from "react-router-dom";
+import {useEffect, useState} from "react";
+
+type TrackDetailsViewProps = {
+    name: string;
+    image: string;
+    previous: number;
+    next: number;
+    overall: LeaderboardEntryProps[];
+    week: LeaderboardEntryProps[];
+}
 
 export default function TrackDetailsView() {
     const navigate = useNavigate();
+    const [data , setData] = useState<TrackDetailsViewProps>();
 
     function backbutton() {
         navigate(`/`);
     }
 
-    let leaderBoardEntryProps = {
-        car: "Ferrari",
-        name: "Sebastian Vettel",
-        time: "1:23:456",
-        weather: 1,
-        placing: 1
-    }
+    useEffect(() => {
+        fetch('track-1.json')
+            .then(response => response.json())
+            .then(data => setData(data));
+    });
 
+    if (data === undefined) {
+        return <div>Loading...</div>;
+    }
     return (
         <div className={"details-board"}>
             <div className={"detail-logo-box"}>
@@ -27,19 +39,17 @@ export default function TrackDetailsView() {
             </div>
             <div className={"detail-body"}>
                 <TrackDetailTitle title={"Track Details"} image={"https://via.placeholder.com/800x600"}
-                                  previous={4}
-                                  next={3}/>
+                                  previous={data.previous}
+                                  next={data.next }/>
                 <div className={"detail-content"}>
                     <div className={"detail-leaderboard-week fadeInElement"}>
                         <div className={"detail-leaderboard-week-header"}>
                             <div className={"detail-leaderboard-week-title"}>Leaderboard (diese Woche)</div>
                         </div>
                         <div className={"detail-leaderboard-week-content"}>
-                            <LeaderboardEntry car={leaderBoardEntryProps.car} name={leaderBoardEntryProps.name} time={leaderBoardEntryProps.time} placing={leaderBoardEntryProps.placing} weather={leaderBoardEntryProps.weather}/>
-                            <LeaderboardEntry car={leaderBoardEntryProps.car} name={leaderBoardEntryProps.name} time={leaderBoardEntryProps.time} placing={leaderBoardEntryProps.placing} weather={leaderBoardEntryProps.weather}/>
-                            <LeaderboardEntry car={leaderBoardEntryProps.car} name={leaderBoardEntryProps.name} time={leaderBoardEntryProps.time} placing={leaderBoardEntryProps.placing} weather={leaderBoardEntryProps.weather}/>
-                            <LeaderboardEntry car={leaderBoardEntryProps.car} name={leaderBoardEntryProps.name} time={leaderBoardEntryProps.time} placing={leaderBoardEntryProps.placing} weather={leaderBoardEntryProps.weather}/>
-                            <LeaderboardEntry car={leaderBoardEntryProps.car} name={leaderBoardEntryProps.name} time={leaderBoardEntryProps.time} placing={leaderBoardEntryProps.placing} weather={leaderBoardEntryProps.weather}/>
+                            {data.week.map((entry) => (
+                                <LeaderboardEntry car={entry.car} name={entry.name} time={entry.time} placing={entry.placing} weather={entry.weather}/>
+                                ))}
                         </div>
 
                     </div>
@@ -48,9 +58,9 @@ export default function TrackDetailsView() {
                             <div className={"detail-leaderboard-overall-header-title"}>Leaderboard</div>
                         </div>
                         <div className={"detail-leaderboard-overall-content"}>
-                            <LeaderboardEntry car={leaderBoardEntryProps.car} name={leaderBoardEntryProps.name} time={leaderBoardEntryProps.time} placing={leaderBoardEntryProps.placing} weather={leaderBoardEntryProps.weather}/>
-                            <LeaderboardEntry car={leaderBoardEntryProps.car} name={leaderBoardEntryProps.name} time={leaderBoardEntryProps.time} placing={leaderBoardEntryProps.placing} weather={leaderBoardEntryProps.weather}/>
-                        </div>
+                            {data.overall.map((entry) => (
+                                <LeaderboardEntry car={entry.car} name={entry.name} time={entry.time} placing={entry.placing} weather={entry.weather}/>
+                            ))}                        </div>
                     </div>
                 </div>
                 <div className={"detail-leaderboard-bottom"}>

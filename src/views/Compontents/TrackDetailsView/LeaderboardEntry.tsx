@@ -1,7 +1,7 @@
 import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
 import {IconProp} from "@fortawesome/fontawesome-svg-core";
 
-type LeaderboardEntryProps = {
+export type LeaderboardEntryProps = {
     car: string;
     name: string;
     time: string;

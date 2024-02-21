@@ -1,0 +1,17 @@
+name: Build React App
+on:
+  push:
+    branches:
+      - main
+jobs:
+  build_react:
+    runs-on: ubuntu-latest
+    name: Build React App
+    steps:
+      - uses: actions/checkout@v2
+      - id: Build-React-App
+        uses: BitDEVil2K16/ReactPagesAction@1.0.0
+        with:
+          username: 'kragosh'
+          reponame: 'sector-racing-dashboard'
+          token: ${{ secrets.GITHUB_TOKEN }}

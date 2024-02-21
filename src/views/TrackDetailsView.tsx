@@ -2,7 +2,7 @@ import TrackDetailTitle from "./Compontents/TrackDetailsView/TrackDetailTitle";
 
 import "./TrackDetailsView.css";
 import LeaderboardEntry, {LeaderboardEntryProps} from "./Compontents/TrackDetailsView/LeaderboardEntry";
-import {useNavigate, useParams} from "react-router-dom";
+import {useParams} from "react-router-dom";
 import {useEffect, useState} from "react";
 
 type TrackDetailsViewProps = {
@@ -18,7 +18,6 @@ export default function TrackDetailsView() {
     const [data, setData] = useState<TrackDetailsViewProps>();
     const [loading, setLoading] = useState<boolean>(true);
     let {id} = useParams();
-
 
     useEffect(() => {
         setLoading(true);

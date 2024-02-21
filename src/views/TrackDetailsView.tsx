@@ -1,7 +1,6 @@
 import TrackDetailTitle from "./Compontents/TrackDetailsView/TrackDetailTitle";
 
 import "./TrackDetailsView.css";
-import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
 import LeaderboardEntry, {LeaderboardEntryProps} from "./Compontents/TrackDetailsView/LeaderboardEntry";
 import {useNavigate, useParams} from "react-router-dom";
 import {useEffect, useState} from "react";
@@ -16,7 +15,6 @@ type TrackDetailsViewProps = {
 }
 
 export default function TrackDetailsView() {
-    const navigate = useNavigate();
     const [data, setData] = useState<TrackDetailsViewProps>();
     const [loading, setLoading] = useState<boolean>(true);
     let {id} = useParams();

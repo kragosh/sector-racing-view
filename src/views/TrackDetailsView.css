@@ -14,7 +14,7 @@
     height: 100%;
     display: flex;
     flex-direction: column;
-    align-items: start;
+    align-items: flex-start;
     justify-content: space-between;
     flex-wrap: nowrap;
 
@@ -50,7 +50,7 @@
     height: 100vh;
     display: flex;
     flex-direction: column;
-    align-items: start;
+    align-items: flex-start;
     justify-content: space-between;
     gap: 16px 0px;
     flex-wrap: nowrap;
@@ -65,8 +65,8 @@
     height: auto;
     display: flex;
     flex-direction: row;
-    align-items: start;
-    justify-content: start;
+    align-items: flex-start;
+    justify-content: flex-start;
     gap: 16px 16px;
     padding: 0px;
     flex-wrap: nowrap;
@@ -128,8 +128,8 @@
     height: 100%;
     display: flex;
     flex-direction: row;
-    align-items: start;
-    justify-content: start;
+    align-items: flex-start;
+    justify-content: flex-start;
     gap: 16px;
     padding: 0px;
     flex-wrap: nowrap;
@@ -147,8 +147,8 @@
     box-shadow: 4px 4px 4px 0px rgba(0, 0, 0, 0.2);
     display: flex;
     flex-direction: column;
-    align-items: start;
-    justify-content: start;
+    align-items: flex-start;
+    justify-content: flex-start;
     gap: 0px;
     padding: 0px;
     flex-wrap: nowrap;
@@ -198,8 +198,8 @@
     height: 100%;
     display: flex;
     flex-direction: column;
-    align-items: start;
-    justify-content: start;
+    align-items: flex-start;
+    justify-content: flex-start;
     gap: 12px;
     padding: 16px;
     flex-wrap: nowrap;
@@ -226,8 +226,8 @@
     height: auto;
     display: flex;
     flex-direction: column;
-    align-items: start;
-    justify-content: start;
+    align-items: flex-start;
+    justify-content: flex-start;
     gap: 0px;
     padding: 0px;
     flex-wrap: nowrap;
@@ -313,8 +313,8 @@
     box-shadow: 4px 4px 4px 0px rgba(0, 0, 0, 0.2);
     display: flex;
     flex-direction: column;
-    align-items: start;
-    justify-content: start;
+    align-items: flex-start;
+    justify-content: flex-start;
     gap: 0px;
     padding: 0px;
     flex-wrap: nowrap;
@@ -365,8 +365,8 @@
     height: 100%;
     display: flex;
     flex-direction: column;
-    align-items: start;
-    justify-content: start;
+    align-items: flex-start;
+    justify-content: flex-start;
     gap: 12px;
     padding: 16px;
     flex-wrap: nowrap;

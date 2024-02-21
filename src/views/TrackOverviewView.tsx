@@ -9,7 +9,7 @@ export default function TrackOverviewView() {
     const [state, setState] = useState<TrackType[]>([]);
 
     useEffect(() => {
-        fetch("tracks.json")
+        fetch("https://api.bitdevil2k16.net/demo/racerOverview/tracks")
             .then(response => response.json())
             .then(state => setState(state));
     }, [])

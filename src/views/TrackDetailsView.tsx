@@ -24,7 +24,7 @@ export default function TrackDetailsView() {
 
     useEffect(() => {
         setLoading(true);
-        fetch(`track-${id}.json`)
+        fetch(`https://api.bitdevil2k16.net/demo/racerOverview/trackinfo/${id}`)
             .then(response => response.json())
             .then(data => {
                 setData(data)

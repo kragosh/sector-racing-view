@@ -42,7 +42,7 @@ export default function TrackDetailsView() {
         <div className={"details-board"}>
             <div className={"detail-inner"}>
                 <div className={"detail-logo-box"}>
-                    <img className="detail-logo-img" src={"https://via.placeholder.com/800x600"} alt="sponsor-logo"/>
+                    <img className="detail-logo-img" src={"https://cdn.sektorhud.win/racing%2Fsprunkx.png"} alt="sponsor-logo"/>
                 </div>
                 <div className={"detail-body"}>
 

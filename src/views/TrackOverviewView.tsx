@@ -16,7 +16,7 @@ export default function TrackOverviewView() {
 
     return (
         <div className="board">
-            <OverviewTitle title="Racing Dashboard" image="https://via.placeholder.com/800x600"/>
+            <OverviewTitle title="Racing Dashboard" image="https://cdn.sektorhud.win/racing%2Fsprunkx.png"/>
 
             <div className="overview-content">
                 {state.map((track, index) => (

@@ -13,5 +13,5 @@ jobs:
         uses: BitDEVil2K16/ReactPagesAction@1.0.0
         with:
           username: 'kragosh'
-          reponame: 'sector-racing-dashboard'
+          reponame: 'sector-racing-view'
           token: ${{ secrets.GITHUB_TOKEN }}

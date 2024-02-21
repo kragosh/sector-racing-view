@@ -6,25 +6,45 @@ export type LeaderboardEntryProps = {
     name: string;
     time: string;
     weather: number;
+    weatherstring: string;
+    weathertrans: string;
     placing: number;
 }
 
+export type WeatherData = {
+    name: string;
+    icon: string;
+}
 
-function getIconNameForNumber(number: number):IconProp {
-    if (number === 1) {
+const WeatherIds = [
+    { name: "Extra Sonnig", icon: "sun" },
+    { name: "Klar", icon: "sun" },
+    { name: "Wolkig", icon: "cloud-sun" },
+    { name: "Nebelig", icon: "cloud-sun" },
+    { name: "Nebelig", icon: "cloud" },
+    { name: "Bedekt", icon: "cloud" },
+    { name: "Regnerisch", icon: "cloud-rain" },
+    { name: "Gewitter", icon: "bolt" },
+    { name: "Leichter Regen", icon: "cloud-rain" },
+    { name: "---", icon: "cloud-rain" },
+    { name: "Schnee", icon: "snowflake" },
+    { name: "Blizzard", icon: "snowflake" },
+    { name: "Leichter Schnee", icon: "snowflake" },
+    { name: "Weihnachten", icon: "snowflake" },
+    { name: "Hellowen", icon: "ghost" },
+];
+
+
+function getIconNameForName(name: string):IconProp {
+    const weather = WeatherIds.find((entry) => entry.name === name);
+    if (weather === undefined) {
         return "sun";
     }
-    if (number === 2) {
-        return "cloud-rain";
-    }
-    if (number === 3) {
-        return "snowflake";
-    }
-    return "circle";
+    return weather.icon as IconProp;
 }
 
 export default function LeaderboardEntry(props: LeaderboardEntryProps) {
-    const iconName = getIconNameForNumber(props.weather);
+    const iconName = getIconNameForName(props.weathertrans);
 
     return <div className={"detail-leaderboard-entry fadeInLeftElement"} style={{animationDelay:props.placing*50+"ms",opacity:0}}>
         <div className={"detail-leaderboard-entry-driverbox"}>

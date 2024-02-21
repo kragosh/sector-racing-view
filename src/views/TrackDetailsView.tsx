@@ -60,7 +60,9 @@ export default function TrackDetailsView() {
                                     :
                                     data.week.map((entry) => (
                                         <LeaderboardEntry car={entry.car} name={entry.name} time={entry.time}
-                                                          placing={entry.placing} weather={entry.weather}/>
+                                                          placing={entry.placing} weather={entry.weather} weatherstring={entry.weatherstring}
+                                                            weathertrans={entry.weathertrans}
+                                        />
                                     ))}
                             </div>
 
@@ -75,7 +77,9 @@ export default function TrackDetailsView() {
                                     :
                                     data.overall.map((entry) => (
                                         <LeaderboardEntry car={entry.car} name={entry.name} time={entry.time}
-                                                          placing={entry.placing} weather={entry.weather}/>
+                                                          placing={entry.placing} weather={entry.weather} weatherstring={entry.weatherstring}
+                                                          weathertrans={entry.weathertrans}
+                                        />
                                     ))}                        </div>
                         </div>
                     </div>

@@ -1,0 +1,30 @@
+[
+    {
+        "id": 1,
+        "image": "images/humane-labs.jpg",
+        "name": "Humane Labs",
+        "driver": "Max Mustermann",
+        "time": "1:23:456"
+    },
+    {
+        "id": 2,
+        "image": "images/lsia.png",
+        "name": "LSIA Nightride",
+        "driver": "Maria Musterfrau",
+        "time": "1:23:456"
+    },
+    {
+        "id": 3,
+        "image": "images/stadtpark.png",
+        "name": "Stadtpark Confidentials",
+        "driver": "Max Mustermann",
+        "time": "1:23:456"
+    },
+    {
+        "id": 4,
+        "image": "images/observatory.jpeg",
+        "name": "Observatorium Racing",
+        "driver": "Max Mustermann",
+        "time": "1:23:456"
+    }
+]

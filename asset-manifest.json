@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/sector-racing-view/static/css/main.b26e55a7.css",
+    "main.js": "/sector-racing-view/static/js/main.131d5511.js",
+    "static/js/592.1a467465.chunk.js": "/sector-racing-view/static/js/592.1a467465.chunk.js",
+    "index.html": "/sector-racing-view/index.html",
+    "main.b26e55a7.css.map": "/sector-racing-view/static/css/main.b26e55a7.css.map",
+    "main.131d5511.js.map": "/sector-racing-view/static/js/main.131d5511.js.map",
+    "592.1a467465.chunk.js.map": "/sector-racing-view/static/js/592.1a467465.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.b26e55a7.css",
+    "static/js/main.131d5511.js"
+  ]
+}

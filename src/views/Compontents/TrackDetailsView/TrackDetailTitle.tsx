@@ -1,6 +1,8 @@
 import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
 import {useNavigate} from "react-router-dom";
 
+import "./TrackDetailTitle.css";
+
 type OverviewTitleProps = {
     title: string;
     image: string;

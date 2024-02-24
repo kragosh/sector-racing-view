@@ -1,0 +1,97 @@
+/* detail-leaderboard-entry */
+.detail-leaderboard-entry {
+    box-sizing: border-box;
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: row;
+    align-items: flex-end;
+    justify-content: space-between;
+    gap: 12px;
+    padding: 0px;
+    flex-wrap: nowrap;
+}
+
+/* detail-leaderboard-entry-driverbox */
+.detail-leaderboard-entry-driverbox {
+    box-sizing: border-box;
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    gap: 0px;
+    padding: 0px;
+    flex-wrap: nowrap;
+}
+
+/* detail-leaderboard-entry-driverbox-car */
+.detail-leaderboard-entry-driverbox-car {
+    box-sizing: border-box;
+    width: 100%;
+    height: 18px;
+    color: rgba(255, 255, 255, 1);
+    font-family: 'Raleway';
+    font-style: normal;
+    font-size: 14px;
+    font-weight: 300;
+    line-height: 1.2;
+    letter-spacing: 0px;
+    text-decoration: none;
+    text-transform: none;
+}
+
+/* detail-leaderboard-entry-driverbox-name */
+.detail-leaderboard-entry-driverbox-name {
+    box-sizing: border-box;
+    width: 100%;
+    height: 33px;
+    color: rgba(255, 255, 255, 1);
+    font-family: 'Raleway';
+    font-style: normal;
+    font-size: 24px;
+    font-weight: 300;
+    line-height: 1.2;
+    letter-spacing: 0px;
+    text-decoration: none;
+    text-transform: none;
+}
+
+/* detail-leaderboard-entry-time */
+.detail-leaderboard-entry-time {
+    box-sizing: border-box;
+    width: auto;
+    height: 100%;
+    align-self: center;
+    color: rgba(255, 255, 255, 1);
+    font-style: normal;
+    font-size: 24px;
+    font-weight: 800;
+    line-height: 1.2;
+}
+
+/* detail-leaderboard-entry-weather */
+.detail-leaderboard-entry-weather {
+    width: 32px;
+    height: 32px;
+    color: rgba(255, 255, 255, 1);
+    align-self: center;
+}
+
+/* detail-leaderboard-entry-placing */
+.detail-leaderboard-entry-placing {
+    box-sizing: border-box;
+    width: auto;
+    height: 100%;
+    align-self: center;
+    color: rgba(255, 255, 255, 1);
+    font-family: 'Raleway';
+    font-style: normal;
+    font-size: 24px;
+    font-weight: 300;
+    line-height: 1.2;
+    letter-spacing: 0px;
+    text-decoration: none;
+    text-transform: none;
+}

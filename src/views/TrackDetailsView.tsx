@@ -1,6 +1,10 @@
 import TrackDetailTitle from "./Compontents/TrackDetailsView/TrackDetailTitle";
 
 import "./TrackDetailsView.css";
+
+import "./LeaderBoardWeek.css";
+import "./LeaderBoardOverall.css";
+
 import LeaderboardEntry, {LeaderboardEntryProps} from "./Compontents/TrackDetailsView/LeaderboardEntry";
 import {useParams} from "react-router-dom";
 import {useEffect, useState} from "react";
